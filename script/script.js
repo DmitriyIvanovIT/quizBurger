@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     firebase.initializeApp(firebaseConfig);
 
     // Прием данных из вне
-    const getData = (url) => {
+    const getData = () => {
         formAnswers.textContent = 'LOAD';
         prev.classList.add('d-none');
         next.classList.add('d-none');
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Обработчики событий
     btnOpenModal.addEventListener('click', () => {
         toggleModal();
-        getData('./questions.json');
+        getData();
     });
 
     closeModal.addEventListener('click', toggleModal);
